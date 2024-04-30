@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myId"></h1>
+
+
+    
+    <script>
+
+    const head =    document.getElementById('myId')
+        const fetchApi = async () => {
+
+const res =  await fetch('https://jsonplaceholder.typicode.com/users')
+const data =  await res.json()
+console.log(data)
+head.innerHTML = data[0].name;
+}
+
+
+
+
+fetchApi()
+    </script>
+</body>
+</html>
