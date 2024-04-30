@@ -3,7 +3,7 @@ function perfect(num){
 
 
     if(num<=0){
-        return false
+        return false;
     }
 
 let sum = 0
