@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//        const fetchApi = async() => { 
+//        const res = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
+//            const data =  await res.json()
+//         //   console.log(data[0].author.login)
+//         // console.log(data[0]?.author?.login);
+//        console.log(  data[0].url)
+
+//         // console.log(data)
+//        }
+//     //    alert(commits[0].author.login);
+// fetchApi()
+
+fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
+.then(res => res.json())
+.then(data => console.log(data[0].committer.node_id))
+
+
+    </script>
+    
+</body>
+</html>
